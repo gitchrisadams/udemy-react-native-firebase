@@ -3,14 +3,16 @@ import {Button, Card, CardSection, Input} from './common';
 
 {/* value and onChangeText are passed to Input as prop */}
 class LoginForm extends Component {
-	state = {text: '' };
+	state = {email: '' };
 	render() {
 		return (
 			<Card>
 				<CardSection>
 					<Input 
-						value={this.state.text}
-						onChangeText={text => this.setState({text})}
+						placeholder="yourEmail@yourEmail.com"
+						label="Email"
+						value={this.state.email}
+						onChangeText={email => this.setState({email})}
 					/>
 				</CardSection>
 				<CardSection />
